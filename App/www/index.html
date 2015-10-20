@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.5.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.inline-svg-1.4.5.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons-1.4.5.min.css">
+        <link rel="stylesheet" type="text/css" href="css/festival-edesio.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/index.js"></script>
+        <script src="cordova.js"></script>
+        <title>Festival Edésio Santos</title>
+    </head>
+    <body>
+        <section data-role="page" id="inicio">
+            <div data-role="main" class="ui-content">
+                <img src="img/logo.png">
+                <div class="ui-body">
+                    <ul data-role="listview" data-inset="true" data-icon="none">
+                        <li><a href="#sobre">Sobre o festival</a></li>
+                        <li><a href="#musicas">Músicas participantes</a></li>
+                        <li><a href="#edicoes">Últimas edições</a></li>
+                        <li><a href="#instagram">Festival no Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section data-role="page" id="votacao">
+            <header data-role="header" data-position="fixed" data-fullscreen="true">
+                <a href="#inicio" class="btn-voltar">&lt; Voltar</a>
+            </header>
+            
+            <div class="ui-content">
+            </div>
+        </section>
+        
+        <section data-role="page" id="resultado">
+            <header data-role="header" data-position="fixed" data-fullscreen="true">
+                <a href="#inicio" class="btn-voltar">&lt; Voltar</a>
+            </header>
+            
+            <div class="ui-content">
+            </div>
+        </section>
+        
+        <section data-role="page" id="musicas">
+            <header data-role="header" data-position="fixed" data-fullscreen="true">
+                <a href="#inicio" class="btn-voltar">&lt; Voltar</a>
+            </header>
+            
+            <div class="ui-content">
+            </div>
+        </section>
+        
+        <section data-role="page" id="instagram">
+            <header data-role="header" data-position="fixed" data-fullscreen="true">
+                <a href="#inicio" class="btn-voltar">&lt; Voltar</a>
+            </header>
+            
+            <div class="ui-content">
+            </div>
+        </section>
+        
+        <section data-role="page" id="edicoes">
+            <header data-role="header" data-position="fixed" data-fullscreen="true">
+                <a href="#inicio" class="btn-voltar">&lt; Voltar</a>
+            </header>
+            
+            <div class="ui-content">
+            </div>
+        </section>
+        
+        <section data-role="page" id="sobre">
+            <header data-role="header" data-position="fixed" data-fullscreen="true">
+                <a href="#inicio" class="btn-voltar">&lt; Voltar</a>
+            </header>
+            
+            <div class="ui-content">
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.bigeyessolution.FestivalEdesio" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Festival Edésio Santos</name>
+    <description>
+        Aplicativo oficial do Festival Edésio Santos de canção.
+        * Notícias
+        * Fotos
+        
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    <preference name="orientation" value="portrait"/>
+    <preference name="target-device" value="universal"/>
+    <preference name="fullscreen" value="false"/>
+    <preference name="prerendered-icon" value="true"/>
+    <preference name="detect-data-types" value="true"/>
+    <preference name="exit-on-suspend" value="true"/>
+    <preference name="BackgroundColor" value="0x00000000"/>
+    <preference name="AutoHideSplashScreen" value="true"/>
+    <preference name="SplashScreenDelay" value="5000" />
+    <preference name="android-minSdkVersion" value="15"/>
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <icon src="res/icon-36-ldpi.png" density="ldpi" />
+        <icon src="res/icon-48-mdpi.png" density="mdpi" />
+        <icon src="res/icon-72-hdpi.png" density="hdpi" />
+        <icon src="res/icon-96-xhdpi.png" density="xhdpi" />
+        <splash src="res/splash-hdpi.png" density="port-hdpi"/>
+        <splash src="res/splash-ldpi.png" density="port-ldpi"/>
+        <splash src="res/splash-mdpi.png" density="port-mdpi"/>
+        <splash src="res/splash-xhdpi.png" density="port-xhdpi"/>
+    </platform>
+</widget>
