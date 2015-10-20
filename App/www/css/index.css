@@ -20,7 +20,7 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
-html, body, .ui-page, .ui-content { height: 100%;}
+html, body, .ui-page, .ui-content { width: 100%; height: 100%;}
 
 @font-face {
     font-family: bradhitc;
@@ -47,8 +47,19 @@ img[src='img/logo.png'] {
     
 }
 
+img[src='img/ponte.png'] {
+    width: 100%;
+    height: auto;
+}
+
 #inicio .ui-content {
     text-align: center;
+    margin-bottom: 0;
+}
+
+.ui-content {
+    text-align: justify;
+    margin-bottom: 0;
 }
 
 #inicio .ui-content .ui-body {
@@ -76,7 +87,7 @@ img[src='img/logo.png'] {
     background-size: cover;
 }
 
-.ui-content {
+#inicio .ui-content {
     padding: 0;
     
     background-image: url('../img/ponte.png');
