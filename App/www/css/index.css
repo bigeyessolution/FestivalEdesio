@@ -87,10 +87,13 @@ img[src='img/ponte.png'] {
     background-size: cover;
 }
 
-#inicio .ui-content {
-    padding: 0;
-    
+.ui-content {
     background-image: url('../img/ponte.png');
     background-position: bottom center;
-    background-size: contain;
+    
+    padding-bottom: 150px;
+}
+
+#inicio .ui-content {
+    padding: 0;
 }
