@@ -38,4 +38,8 @@ class Database extends PDO {
         
         return $result;
     }
+    
+    public function insert ($table, $field_values) {
+        
+    }
 }

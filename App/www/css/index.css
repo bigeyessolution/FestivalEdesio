@@ -44,6 +44,16 @@ body {
     color: #d10304 !important;
 }
 
+.ui-header {
+    border: 0;
+}
+
+.header-voltar-scrl {
+    /*background-color: #d2ae6e !important;*/
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    /*opacity: 0.7*/
+}
+
 img[src='img/logo.png'] {
     margin-top: 1em;
     height: 30%;

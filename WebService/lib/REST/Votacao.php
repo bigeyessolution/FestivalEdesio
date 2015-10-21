@@ -6,7 +6,7 @@ class votacao extends RESTObject {
 	}
     
     public function POST() {
-        throw new RESTMethodNotImplemented ('TotalDeVotos', 'POST');
+        
     }
     
     public function PUT () {
