@@ -2,11 +2,18 @@
 /**
  *
  */
-
-$application ['database']['host'] = 'localhost';
-$application ['database']['port'] = '3306';
-$application ['database']['user'] = 'juazeiro24';
-$application ['database']['password'] = '9TnP37Wx9S';
-$application ['database']['database'] = 'juazeiro24';
-
-$application ['security']['secret_key'] = 'SenhaDeTeste';
+function getConf() {
+    return array (
+        'database' => array (
+            'database' => 'juazeiro24',
+            'host' => 'localhost',
+            'port' => '3306',
+            'user' => 'juazeiro24',
+            'password' => '9TnP37Wx9S'
+        ),
+        'security' => array (
+            'secret_key' => 'SenhaDeTeste'
+        )
+    );
+  
+} 

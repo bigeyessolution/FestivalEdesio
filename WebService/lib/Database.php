@@ -1,15 +1,20 @@
 <?php
-
 class Database extends PDO {
-    protect static $db = FALSE;
+    protected static $db = FALSE;
     
-    public function __construct () {
+    public function __construct () { 
+        $application = getConf();
+        
+        $database = $application['database']['database'];
+        $host = $application['database']['host'];
+        $port = $application['database']['port'];
+        
         parent::__construct (
-            "mysql:dbname=${application ['database']['database']};".
-            "host=${application ['database']['host']};".
-            "port=${application ['database']['port']};",
-            $application ['database']['user'],
-            $application ['database']['password']
+            "mysql:dbname=$database;".
+            "host=$host;".
+            "port=$port;",
+            $application['database']['user'],
+            $application['database']['password']
         );
     }
     
@@ -19,5 +24,18 @@ class Database extends PDO {
         }
         
         return Database::$db;
+    }
+    
+    /**
+     * 
+     * @param $table string
+     * @param $params array
+     *
+     * @return
+     */
+    public function select ($table, $params) {
+        $result = $this->query("SELECT * FROM $table", PDO::FETCH_ASSOC);
+        
+        return $result;
     }
 }
