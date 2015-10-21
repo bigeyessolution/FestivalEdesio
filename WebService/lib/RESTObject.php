@@ -3,7 +3,7 @@
 abstract class RESTObject {
     protected static $object = false;
     
-    protected $result = (object) array();
+    private $result = false;
     
     abstract public function GET($id);
     
@@ -13,13 +13,17 @@ abstract class RESTObject {
     
     abstract public function DELETE();
     
+    protected function setResult ($result) {
+        $this->result = $result;
+    }
+    
     public function getJSON () {
-	return json_encode (
-		$this->result, 
-		JSON_NUMERIC_CHECK | 
-		JSON_PRESERVE_ZERO_FRACTION | 
-		JSON_ERROR_NONE
-		);
+        return json_encode (
+            $this->result, 
+            JSON_NUMERIC_CHECK | 
+            JSON_PRESERVE_ZERO_FRACTION | 
+            JSON_ERROR_NONE
+            );
     }
     
     public function printJSON () {
@@ -30,10 +34,10 @@ abstract class RESTObject {
     
     public static function objectFactory () {
         if (RESTObject::$object === false) {
-            $object_name = Route::getObjectName ();
+            $object_name = Router::getObjectName ();
             
-            if (file_exists("./REST/$object_name.php")) {
-                require_once "./REST/$object_name.php";
+            if (file_exists(__DIR__."/REST/$object_name.php")) {
+                require_once __DIR__."/REST/$object_name.php";
                 
                 RESTObject::$object = new $object_name ();
             } else {
@@ -41,6 +45,6 @@ abstract class RESTObject {
             }
         }
         
-        RESTObject::$object
+        return RESTObject::$object;
     }
 }
