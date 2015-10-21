@@ -12,6 +12,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
+        <meta charset="UTF-8">
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
@@ -31,9 +32,11 @@
     </head>
     <body>
         <section data-role="page" id="inicio">
-            <div data-role="main" class="ui-content">
-                <img src="img/logo.png">
-                <div class="ui-body">
+            <div data-role="main" class="ui-body">
+                <div style="text-align: center;">
+                <img src="img/logo.png" style="width: 40%">
+                </div>
+                <div>
                     <ul data-role="listview" data-inset="true" data-icon="none">
                         <li><a href="#sobre">Sobre o festival</a></li>
                         <li><a href="#musicas">Músicas participantes</a></li>
@@ -42,6 +45,10 @@
                     </ul>
                 </div>
             </div>
+            
+            <footer class="ui-footer" data-role="footer" data-position="fixed" data-fullscreen="true" data-tap-toggle="false"> 
+                <div class="ui-content"></div>
+            </footer>
         </section>
         
         <section data-role="page" id="votacao">
@@ -49,8 +56,12 @@
                 <a href="#inicio" class="btn-voltar">&lt; Voltar</a>
             </header>
             
-            <div class="ui-content">
+            <div class="ui-body">
             </div>
+            
+            <footer class="ui-footer" data-role="footer" data-position="fixed" data-fullscreen="true" data-tap-toggle="false"> 
+                <div class="ui-content"></div>
+            </footer>
         </section>
         
         <section data-role="page" id="resultado">
@@ -58,17 +69,123 @@
                 <a href="#inicio" class="btn-voltar">&lt; Voltar</a>
             </header>
             
-            <div class="ui-content">
+            <div class="ui-body">
             </div>
+            
+            <footer class="ui-footer" data-role="footer" data-position="fixed" data-fullscreen="true" data-tap-toggle="false"> 
+                <div class="ui-content"></div>
+            </footer>
         </section>
         
         <section data-role="page" id="musicas">
-            <header data-role="header" data-position="fixed" data-fullscreen="true">
+            <header data-role="header" data-position="fixed" data-fullscreen="true" data-tap-toggle="false">
                 <a href="#inicio" class="btn-voltar">&lt; Voltar</a>
             </header>
             
-            <div class="ui-content">
-            </div>
+                <div class="div_paragrafo">
+                    <img src="img/Partitura_img.png" class="img_paragrafo" alt="">
+                </div>
+                <div class="ui-body">
+                <h3 class="p_paragrafo titulo"><b>A Lenda do Patau</b></h3>
+                <p class="p_paragrafo"><i>Era uma casa velha, de janelas abertas, para um céu de anil, em um pé de serra verde, de terreno fértil, dentro do Brasil, e um rio desaguava, numa cachoeira de águas febris!”</i></p>
+                <p class="p_paragrafo">Composição de <b>Reinivaldo Pinheiro;</b> Interprete <b>Reinivaldo Pinheiro.</b></p> 
+               
+                <h3 class="p_paragrafo titulo"><b>A Rezadeira</b></h3>
+                <p class="p_paragrafo"><i>“Perto da linha do trem, lá em cima da ladeira, numa casa de madeira, a direita de quem vem, mora uma rezadeira que mamãe conhece bem. DO chifre da áfrica, trouxe suas medicinas, que aprendeu desde menina, a babosa e a páprica!”</i></p>
+                <p class="p_paragrafo">Composição de <b>Rodolfo Elias Minare;</b> Interprete <b>Rafaela Melo.</b></p>  
+                
+                <h3 class="p_paragrafo titulo"><b>Andarilho da Canção</b></h3>
+                <p class="p_paragrafo"><i>“Os versos caindo no colo de quem faz a canção, revelam segredos e sonhos na luz da inspiração... Vou tecendo meu próprio destino, bordando o meu caminhar, entre abismo de rosas e de espinhos, Sou andarilho do cantar!”</i></p>
+                <p class="p_paragrafo">Composição de <b>João Emídio Carvalho;</b> Interprete <b>João Emídio.</b></p>  
+                
+                <h3 class="p_paragrafo titulo"><b>Bonito pra chover</b></h3>
+                <p class="p_paragrafo"><i>“No baile foi anoitecendo, no horizonte tá bonito pra chover, se a sanfona não se afogar, a gente dança até o amanhecer. Se for de vento segura a barraca, se for pra arca chama por Noé, se a chuva fina vier pra ficar, vamos dançar e arrastar o pé!”</i></p>
+                <p class="p_paragrafo">Composição de <b>João Linhares;</b> Interprete <b>João Linhares.</b></p>    
+                
+                <h3 class="p_paragrafo titulo"><b>Celebração</b></h3>
+                <p class="p_paragrafo"><i>“Celebro os doidos da arte, e seu mundo a parte, sem regras cabais, que navegam sozinhos, por um mar de vinho, sem buscar um cais, que mesmo sem vê-las, acendem estrelas, nas almas feridas e vivem sem medo!”</i></p>
+                <p class="p_paragrafo">Composição de <b>Zebeto Corrêa;</b> Interprete <b>Zebeto Corrêa.</b></p>      
+                
+                <h3 class="p_paragrafo titulo"><b>Conchas</b></h3>
+                <p class="p_paragrafo"><i>“Nas conchas das minhas mãos uma rosa indefinível, a brisa silvestre, o perfume, a relva de luz no quintal. As noites brancas de lua, vagido que vem da rua, as nuvens rubras de sal!”</i></p>
+                <p class="p_paragrafo">Composição de <b>Marília Abduane;</b> Interprete <b>Fabiana Santiago.</b></p>     
+                
+                <h3 class="p_paragrafo titulo"><b>Coração do Sertão</b></h3>
+                <p class="p_paragrafo"><i>“Existe um Deus em cada canto do sertão, manifestado em raça, fé e um violão... E o som que sai do coração, meu Deus do Céu, não me deixe não sem meu sertão, nem sempre foste verde, coração do sertão.  Contraste, vida e seca mas nem sempre arribação!”</i></p>
+                <p class="p_paragrafo">Composição de <b>Juliana Genovez;</b> Interprete <b>Juliana Genovez.</b></p>     
+                
+                <h3 class="p_paragrafo titulo"><b>Em Casa</b></h3>
+                <p class="p_paragrafo"><i>“Se mais sílabas tivesse, encompridava esta prosa, pra te dizer nega veia, que és mais que uma rosa, És a flor da macambira, o doce mel da cupira que o cupim não lambeu!”</i></p>
+                <p class="p_paragrafo">Composição de <b>Dário Junior e Zeca Moreira;</b> Interprete <b>Dário Junior.</b></p>     
+                
+                <h3 class="p_paragrafo titulo"><b>Fato Consumado</b></h3>
+                <p class="p_paragrafo"><i>“... Maria ganhou fama de estuprada, de vítima de um crime passou à culpada, e ninguém quis lhe assumir com amor, machismo de macho é mesmo um horror! Machismo de macho é mesmo um horror!”</i></p>
+                <p class="p_paragrafo">Composição de <b>Paulo Soares e Sérgio Murilo;</b> Interprete <b>Paulo Soares.</b></p>    
+                
+                <h3 class="p_paragrafo titulo"><b>Fera Insana</b></h3>
+                <p class="p_paragrafo"><i>“Por que a morte essa fera insana, Não nos respeita nem na mocidade, insaciável com ferocidade, vai devorando toda a raça humana, vai também a mansão palaciana, impor a dureza de sua verdade”</i></p>
+                <p class="p_paragrafo">Composição de <b>Tico Seixas e Maurício Menezes;</b> Interprete <b>Tico Seixas.</b></p>   
+                
+                <h3 class="p_paragrafo titulo"><b>Gente de Arribação</b></h3>
+                <p class="p_paragrafo"><i>“Eita! A chuva não veio; o chão já rachou... Eita! A caatinga ta cinza, o dia raiou, acorda menina levanta uma prece para São José! Ei Pai! O poço secou, só trago na lata um resto d’água que o chão deixou!”</i></p>
+                <p class="p_paragrafo">Composição de <b>Zuza;</b> Interprete <b>Zuza.</b></p>  
+                
+                <h3 class="p_paragrafo titulo"><b>Índios Cariris</b></h3>
+                <p class="p_paragrafo"><i>“Com encanto e beleza não tinha represa era só passar, Belquior encantado e a missão franciscana a catequizar, um povo meio menino mais o seu destino era tão cruel, trocar o cocar pra viver sob a aba de um chapéu!”</i></p>
+                <p class="p_paragrafo">Composição de <b>Nilson Mattos;</b> Interprete <b>Nilson Mattos.</b></p>
+                
+                <h3 class="p_paragrafo titulo"><b>Melismas</b></h3>
+                <p class="p_paragrafo"><i>“Já cansei ladeiras, com as pernas de quem sabe aonde quer chegar. Cogitei maneiras de tentar driblar as incertezas... Seguia as estrelas como quem pretende decodificar o fio do destino. Solto pelo vento me lancei a sorte sobrepondo as leis do tempo!”</i></p>
+                <p class="p_paragrafo">Composição de <b>Kereto;</b> Interprete <b>Kereto.</b></p>
+                
+                <h3 class="p_paragrafo titulo"><b>Melodia das Estrelas</b></h3>
+                <p class="p_paragrafo"><i>“Um rabisco dissonante, de uma partitura às traças... Rompeu desobediente e seguiu sem rumo algum. Encontrou na curva azul, um solo em Ré maior de uma cantiga de ninar, que acordava corações em mimos e alucinações!”</i></p>
+                <p class="p_paragrafo">Composição de <b>Rennan Mendes e Erica Jane Ribeiro;</b> Interprete <b>Joice Guirra.</b></p>
+                
+                <h3 class="p_paragrafo titulo"><b>O amolador de tesouras</b></h3>
+                <p class="p_paragrafo"><i>“Da rua, vem um som de realejo, e anuncia que um andejo, velho artista amador, passa empurrando um monociclo, aparatado qual veículo lunar, misto amolador que no girar, de correntes e polias, de correias, fantasias, é o labutar de um sonhador!”</i></p>
+                <p class="p_paragrafo">Composição de <b>Petrucio Baêtto e Stanley de Carvalho;</b> Interprete <b>Cristiano Lima.</b></p>
+                
+                <h3 class="p_paragrafo titulo"><b>O Bastante pra Durar</b></h3>
+                <p class="p_paragrafo"><i>“Construímos um chão pra a gente pisar, e abriu um céu estrelado pra você olhar, e nem as paredes ao redor de lá não podiam mais... Plantei duas filas de coco, o ar era puro e água não ia faltar.”</i></p>
+                <p class="p_paragrafo">Composição de <b>Pedro Matheus Bandeira;</b> Interprete <b>Peu bandeira com a Banda Soda Solta.</b></p>
+                
+                <h3 class="p_paragrafo titulo"><b>Os olhos cegos do rio</b></h3>
+                <p class="p_paragrafo"><i>“Ana na beira do rio, vai malhando em barro frio, bordando em partes, que molham faces pra o meu desvario, recriando antigos medos, na franja sensível dos dedos, os olhos de quem nunca viu!”</i></p>
+                <p class="p_paragrafo">Composição de <b>Mariano Carvalho;</b> Interprete <b>Mariano Carvalho.</b></p>
+                
+                <h3 class="p_paragrafo titulo"><b>Poesia de Beber</b></h3>
+                <p class="p_paragrafo"><i>“Viva o Rio São Francisco, nossa poesia de beber! Que me ensinou a nadar e ainda me ensina a viver. Pelos caminhos do mundo, Eu vou forte eu vou fundo, eu vou lá... Sob o ouro de um céu nordestino e sobre as estrelas do mar!”</i></p>
+                <p class="p_paragrafo">Composição de <b>Expedito Almeida;</b> Interprete <b>Expedito Almeida.</b></p>
+                
+                <h3 class="p_paragrafo titulo"><b>Quando você for embora</b></h3>
+                <p class="p_paragrafo"><i>“Quando você for embora espero que seja de dia, que o céu esteja aberto, que haja luz na noite fria, e minha dor bote pra fora o verso que não saía. Espero que seja forte e rente qual vôo de harpia, a faca cega sem corte ensina como se afia!”</i></p>
+                <p class="p_paragrafo">Composição de <b>Renato Almeida Junior e Carlos Alberto Batuta Santos;</b> Interprete <b>Nadjau Oliveira.</b></p>
+                
+                <h3 class="p_paragrafo titulo"><b>Racionalmente Irracional</b></h3>
+                <p class="p_paragrafo"><i>“Matar pra matar sua fome ou defender sua prole, É desumano! É desumano! Matar por matar, por esporte ou por hobby! É bem humano, é bem humano! Bolsa de couro de jacaré, tapete de urso pra limpar o pé, na parede a cabeça de um tigre... Um troféu!”</i></p>
+                <p class="p_paragrafo">Composição de <b>Marcelo Cantalino;</b> Interprete <b>Marcelo Cantalino.</b></p>
+                
+                <h3 class="p_paragrafo titulo"><b>Seu Damião</b></h3>
+                <p class="p_paragrafo"><i>“Seu Damião já tem pra mais de setenta, mas não aparenta, nunca ta na pior, sempre arrumado, perfumado e sorrindo, sapato branco e um belo paletó. Quando ele adentra a mulherada se esquenta, causando fila pra dançar forró!”</i></p>
+                <p class="p_paragrafo">Composição de <b>Marcos Dias de Lima;</b> Interprete <b>Marcos Dias de Lima.</b></p>
+                
+                <h3 class="p_paragrafo titulo"><b>Se eu quiser</b></h3>
+                <p class="p_paragrafo"><i>“Se eu quiser sambar, vou na boa nada a mais, convite é o som quem faz, se a gente sentir. Se eu quiser sambar sem aplausos e confetes, apoteose de gente se basta sentir. Se eu quiser sambar deixo que o tempo se faça, samba, pop ou bossa nova e tudo se possa ouvir!”</i></p>
+                <p class="p_paragrafo">Composição de <b>Moesio Belfort;</b> Interprete <b>Moesio Belfort.</b></p>
+                
+                <h3 class="p_paragrafo titulo"><b>Uma linha</b></h3>
+                <p class="p_paragrafo"><i>“Uma linha, que de retilínea e longa, Eu me encontre tentando te achar. Que componha os tecidos do seu corpo, uma linha de tempo... Que possa ser eterna enquanto durar, onde eu matematize o etéreo brio do seu olhar!”</i></p>
+                <p class="p_paragrafo">Composição de <b>Petrônio Ranieri;</b> Interprete <b>Petrônio Munduri.</b></p>
+                
+                <h3 class="p_paragrafo titulo"><b>Uma outra canção</b></h3>
+                <p class="p_paragrafo"><i>“Não quero fazer uma outra canção, nem samba nem sombra serei sem razão, quem sabe você possa então perceber, quem sabe o silêncio lhe possa ensinar, não quero fazer outra cena de amor!”</i></p>
+                <p class="p_paragrafo">Composição de <b>Alexandre Leão e Manuca Almeida;</b> Interprete <b>Andrezza Santos.</b></p>
+                </div>
+            
+            <footer class="ui-footer" data-role="footer" data-position="fixed" data-fullscreen="true" data-tap-toggle="false"> 
+                <div class="ui-content"></div>
+            </footer>
         </section>
         
         <section data-role="page" id="instagram">
@@ -76,8 +193,17 @@
                 <a href="#inicio" class="btn-voltar">&lt; Voltar</a>
             </header>
             
-            <div class="ui-content">
-            </div>
+            <div class="ui-body">
+                <div class="div_paragrafo">
+                    <img src="img/Publico_img.png" class="img_paragrafo" alt="">
+                </div>
+                <p class="p_paragrafo">Para ver sua foto aqui use a hastag #FestivalEdesio2015                    
+                </p>    
+            </div>           
+            
+            <footer class="ui-footer" data-role="footer" data-position="fixed" data-fullscreen="true" data-tap-toggle="false"> 
+                <div class="ui-content"></div>
+            </footer>
         </section>
         
         <section data-role="page" id="edicoes">
@@ -85,8 +211,15 @@
                 <a href="#inicio" class="btn-voltar">&lt; Voltar</a>
             </header>
             
-            <div class="ui-content">
+            <div class="ui-body">
+                <h2 class="h_paragrafo">Um pouco de história</h2>
+                <p class="p_paragrafo">Em 1993 pessoas criativas e com boas idéias criaram este Festival, inspirados na realização do Festival da Canção Sanfranciscana – Troféu Edésio Santos da Canção, que na época já desenhava um formato de festival bem maior. Com o objetivo de homenagear e salvaguardar a história do músico Edésio Santos, a Câmara Municipal de Juazeiro transformou o evento em Lei Municipal, renominando o evento como “Festival Edésio Santos da Canção” Festival realizado pela Prefeitura Municipal de Juazeiro, através da Secretaria de Cultura e Juventude.                    
+                </p>
             </div>
+            
+            <footer class="ui-footer" data-role="footer" data-position="fixed" data-fullscreen="true" data-tap-toggle="false"> 
+                <div class="ui-content"></div>
+            </footer>
         </section>
         
         <section data-role="page" id="sobre">
@@ -94,8 +227,17 @@
                 <a href="#inicio" class="btn-voltar">&lt; Voltar</a>
             </header>
             
-            <div class="ui-content">
+            <div class="ui-body">
+                <div class="div_paragrafo">
+                    <img src="img/Joao_img.png" class="img_paragrafo" alt="">
+                </div>
+                <p class="p_paragrafo">Festival Edésio Santos da Canção! Um encontro Festivo pela música! Este ano traz uma homenagem ao grande mestre da Bossa Nova, o juazeirense João Gilberto! O Tema “Do Cais ao Japão, no Tempo de João” é Em sua primeira frase, uma referência a sua genialidade que sai do cais do Velho Chico em Juazeiro e ganha o mundo, e um exemplo disso, é sua relação com o Japão, onde o artista juazeirense fez diversas apresentações e inclusive fez homenagem a este país em uma canção. A segunda frase pontua a palavra “Tempo” em letra maiúscula, evidenciando que se trata do “tempo” musical que ele criou e que deu origem a Bossa Nova.                    
+                </p>      
             </div>
+            
+            <footer class="ui-footer" data-role="footer" data-position="fixed" data-fullscreen="true" data-tap-toggle="false"> 
+                <div class="ui-content"></div>
+            </footer>
         </section>
     </body>
 </html>
