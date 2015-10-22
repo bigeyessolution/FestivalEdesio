@@ -142,3 +142,8 @@ img[src='img/ponte.png'] {
     border-width: none !important;
     border-style: none !important;
 }
+
+
+.ads iframe{
+    pointer-events:none;
+}
