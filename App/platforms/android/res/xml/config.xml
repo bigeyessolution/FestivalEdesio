@@ -18,21 +18,11 @@
     <feature name="Notification">
         <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
     </feature>
-    <allow-intent href="market:*" />
-    <icon density="ldpi" src="res/icon-36-ldpi.png" />
-    <icon density="mdpi" src="res/icon-48-mdpi.png" />
-    <icon density="hdpi" src="res/icon-72-hdpi.png" />
-    <icon density="xhdpi" src="res/icon-96-xhdpi.png" />
-    <splash density="port-hdpi" src="res/splash-hdpi.png" />
-    <splash density="port-ldpi" src="res/splash-ldpi.png" />
-    <splash density="port-mdpi" src="res/splash-mdpi.png" />
-    <splash density="port-xhdpi" src="res/splash-xhdpi.png" />
     <name>Festival Edésio Santos</name>
     <description>
         Aplicativo oficial do Festival Edésio Santos de canção.
         * Notícias
         * Fotos
-        
     </description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">
         Apache Cordova Team
@@ -55,4 +45,17 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon-36-ldpi.png" />
+    <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon-48-mdpi.png" />
+    <icon gap:platform="android" gap:qualifier="hdpi" src="res/icon-72-hdpi.png" />
+    <icon gap:platform="android" gap:qualifier="xhdpi" src="res/icon-96-xhdpi.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="res/splash-ldpi.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="res/splash-mdpi.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="res/splash-hdpi.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/splash-xhdpi.png" />
+    <gap:splash src="splash.png" />
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.splashscreen" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="com.adobe.plugins.gaplugin" />
 </widget>
