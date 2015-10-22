@@ -5,16 +5,16 @@ class Database extends PDO {
     public function __construct () { 
         $application = getConf();
         
-        $database = $application['database']['database'];
-        $host = $application['database']['host'];
-        $port = $application['database']['port'];
+        $database = getConf()['database'];
+        $host = getConf()['host'];
+        $port = getConf()['port'];
         
         parent::__construct (
             "mysql:dbname=$database;".
             "host=$host;".
             "port=$port;",
-            $application['database']['user'],
-            $application['database']['password']
+            getConf()['user'],
+            getConf()['password']
         );
     }
     
@@ -33,10 +33,14 @@ class Database extends PDO {
      *
      * @return
      */
-    public function select ($table, $params) {
-        $result = $this->query("SELECT * FROM $table ".
-                               $params ? $params: ''
-                               , PDO::FETCH_ASSOC);
+    public function select ($table, $params = false) { 
+    	if ($params != false) {
+    		$query = "SELECT * FROM $table WHERE $params";
+    	} else {
+    		$query = "SELECT * FROM $table";
+    	}
+    	    	
+        $result = $this->query($query, PDO::FETCH_ASSOC);
                 
         return $result;
     }
@@ -53,7 +57,7 @@ class Database extends PDO {
         $statement = $this->prepare ("INSERT INTO $table($_fields) VALUES ($_prepare)");
         
         foreach($types as $index => $type){
-            $statement->bindParam($prepare[$index], $values[index], $type);
+            $statement->bindParam($prepare[$index], $values[$index], $type);
         }
         
         return $statement->execute();

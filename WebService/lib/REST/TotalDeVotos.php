@@ -1,7 +1,7 @@
 <?php 
 
 class TotalDeVotos extends RESTObject {
-	public function GET($id) {
+	public function GET() {
         $st = Database::getDatabase()->select('total_de_votos');
         
         $result = array ();

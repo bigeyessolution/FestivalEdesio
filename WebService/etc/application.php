@@ -3,25 +3,17 @@
  *
  */
 function getConf() {
-    return array (
-        'database' => array (
-            'database' => 'juazeiro24',
-            'host' => 'localhost',
-            'port' => '3306',
-            'user' => 'juazeiro24',
-            'password' => '9TnP37Wx9S'
-        ),
-        'security' => array (
-            'secret_key' => 'SenhaDeTeste'
-        ),
-        'dia01' => array (
-        	'inicio' => (new DateTime ('2015-10-22 20:00:00.000000'))->getTimestamp(),
-        	'fim' => (new DateTime ('2015-10-22 23:59:59.999999'))->getTimestamp()
-        ),
-        'dia02' => array (
-        	'inicio' => (new DateTime ('2015-10-23 20:00:00.000000'))->getTimestamp(),
-        	'fim' => (new DateTime ('2015-10-23 23:59:59.999999'))->getTimestamp()
-        )
-    );
-  
-} 
+    $conf ['database'] = 'juazeiro24';
+    $conf ['host'] = 'localhost';
+//    $conf ['host'] = 'mysql.juazeiro.ba.gov.br';
+    $conf ['port'] = '3306';
+    $conf ['user'] = 'juazeiro24';
+    $conf ['password'] = '9TnP37Wx9S';
+    $conf ['secret_key'] = 'aWynosC7nNQrxSWFuoofpgyoDmRwDr';
+    $conf ['dia1_inicio'] = (new DateTime ('2015-10-22 20:00:00.000000'))->getTimestamp();
+    $conf ['dia1_fim'] = (new DateTime ('2015-10-22 23:59:59.999999'))->getTimestamp();
+    $conf ['dia2_inicio'] = (new DateTime ('2015-10-23 20:00:00.000000'))->getTimestamp();
+    $conf ['dia2_fim'] = (new DateTime ('2015-10-23 23:59:59.999999'))->getTimestamp();
+    
+    return $conf;
+}
