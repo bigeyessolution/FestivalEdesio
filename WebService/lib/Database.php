@@ -34,12 +34,28 @@ class Database extends PDO {
      * @return
      */
     public function select ($table, $params) {
-        $result = $this->query("SELECT * FROM $table", PDO::FETCH_ASSOC);
-        
+        $result = $this->query("SELECT * FROM $table ".
+                               $params ? $params: ''
+                               , PDO::FETCH_ASSOC);
+                
         return $result;
     }
     
-    public function insert ($table, $field_values) {
+    public function insert ($table, $fields, $values, $types) {
+        foreach($fields as $field) {
+            $prepare [] = ':'.$field;    
+        }
         
+        $_fields = implode(',', $fields);
+        $_values = implode(',', $values);
+        $_prepare = implode(',', $prepare);
+        
+        $statement = $this->prepare ("INSERT INTO $table($_fields) VALUES ($_prepare)");
+        
+        foreach($types as $index => $type){
+            $statement->bindParam($prepare[$index], $values[index], $type);
+        }
+        
+        return $statement->execute();
     }
 }
