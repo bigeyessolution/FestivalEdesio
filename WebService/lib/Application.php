@@ -1,7 +1,8 @@
 <?php 
 
 class Application {
-    public function __construct () {
-        
+    public static function checkAuth () {
+        return isset($_POST['secret']) and
+            $_POST['secret'] != getConf()['security']['secret_key'];
     }
 }
