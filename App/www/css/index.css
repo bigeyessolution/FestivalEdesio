@@ -34,8 +34,8 @@ body {
     font-family: bradhitc !important;              /* prevent copy paste, to allow, change 'none' to 'text' */
 }
 
-ui-radius input{
-    display: inline !important;
+label{
+    font-family: bradhitc !important;
 }
 
 .ui-body{
