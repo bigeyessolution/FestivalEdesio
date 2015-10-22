@@ -32,9 +32,6 @@ body {
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
 }
-.ui-body{
-    margin-bottom: 150px;       
-}
 
 .btn-voltar {
     background-color: transparent !important;
@@ -42,16 +39,6 @@ body {
     font-family: bradhitc !important;
     font-size: 1em !important;
     color: #d10304 !important;
-}
-
-.ui-header {
-    border: 0;
-}
-
-.header-voltar-scrl {
-    /*background-color: #d2ae6e !important;*/
-    background-color: rgba(255, 255, 255, 0.8) !important;
-    /*opacity: 0.7*/
 }
 
 img[src='img/logo.png'] {
@@ -100,50 +87,9 @@ img[src='img/ponte.png'] {
     background-size: cover;
 }
 
-.ui-content {
-}
-
 #inicio .ui-content {
     padding: 0;
-}
-
-.p_paragrafo{
-    font-family: bradhitc;
-    padding: 0 1em 0 1em;
-}
-
-.titulo{
-    text-align: center;    
-}
-.div_paragrafo{
-    text-align: center;
-    margin-top: 2.5em;
-}
-.h_paragrafo{
-    margin-top: 1.5em;
-    text-align: center;
-    font-family: bradhitc;
-}
-
-.img_paragrafo{
-    width: 100%;
-    height: auto;
-    margin-left: 1.5 em;
-    margin-right: 1.5em;
-}
-
-.ui-footer{
-    background-color: transparent !important;
-    border-color: transparent !important;
+    
     background-image: url('../img/ponte.png');
     background-position: bottom center;
-    min-height: 149px;
-    opacity: 1;
-    border-width: none !important;
-    border-style: none !important;
-}
-
-
-.ads iframe{
-    pointer-events:none;
 }
