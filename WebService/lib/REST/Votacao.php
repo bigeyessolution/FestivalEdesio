@@ -1,7 +1,7 @@
 <?php
 
 class votacao extends RESTObject {
-	public function GET($id) { 
+	public function GET() { 
 		//Retorna a hora e se há alguma votacao em aberto
 		//Se receber uuid, verifica se o dispositivo pode votar (1 voto por dia) 
 		throw new RESTMethodNotImplemented ('TotalDeVotos', 'GET');
@@ -11,17 +11,17 @@ class votacao extends RESTObject {
 		$flag_pode_votar = TRUE;
 		$message = '';
 		
-		$d1start = getConf()['dia01']['inicio'];
-		$d1end = getConf()['dia01']['fim'];
-		$d2start = getConf()['dia02']['inicio'];
-		$d2end = getConf()['dia02']['fim'];
+		$d1start = getConf()['dia1_inicio'];
+		$d1end = getConf()['dia1_fim'];
+		$d2start = getConf()['dia2_inicio'];
+		$d2end = getConf()['dia2_fim'];
 		
 		$ctime = (new DateTime()) -> getTimestamp();
 		
 		$day = $d1start < $ctime and $ctime < $d1end ? 1 :
 				$d2start < $ctime and $ctime < $d2end ? 2 : 
 				FALSE;
-		        
+		
         //Fazer verificacoes
         if (! $day) {
         	$flag_pode_votar = FALSE;
@@ -72,10 +72,41 @@ class votacao extends RESTObject {
     }
     
     private function podeVotar($uuid, $dia) {
- 		return FALSE;       
+    	if ($dia == FALSE) return FALSE;
+    
+    	$podeVotar = FALSE;
+    
+		$resultSet = Database::getDatabase()->select(
+				'dispositivos', "uuid = '$uuid'"
+		)->fetch(PDO::FETCH_ASSOC);
+			
+		if ($resultSet) {
+			$v1 = (boolean) $resultSet['dia1'];
+			$v2 = (boolean) $resultSet['dia2'];
+				
+			$votou = $dia == 1 ? $v1 : $dia == 2 ? $v2 : FALSE; 
+				
+			$podeVotar = $dia != FALSE and $votou == FALSE;
+		}
+ 		
+ 		return $podeVotar;       
     }
     
-    private function podeSerVotada ($uuid, $dia) {
-    	return FALSE;
+    private function podeSerVotada ($idmusica, $dia) {
+    	if ($dia == FALSE) return FALSE;
+    	
+    	$podeSerVotada = FALSE;
+    	
+    	$resultSet = Database::getDatabase()->select(
+				'musicas', "idmusica = '$idmusica'"
+		)->fetch(PDO::FETCH_ASSOC);
+			
+		if ($resultSet) {
+			$mdia = (int) $resultSet['dia'];
+				
+			$podeSerVotada = $dia == $mdia;
+		}
+    	
+    	return $podeSerVotada;
     }
 }

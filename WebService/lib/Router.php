@@ -11,9 +11,16 @@ class Router {
     private static $method = false;
     
     public function init () {
-        $uri = explode('/', $_SERVER['REQUEST_URI']);
+    	
+        $uri = explode('?', $_SERVER['REQUEST_URI']);
         
-        Router::$objectName = $uri[1];
+        $uri = explode('/', $uri[0]);
+        
+        if (count($uri) < 3 or $uri[2] == '') {
+        	Router::$objectName = 'Index';
+        } else {
+        	Router::$objectName = $uri[2];
+        }
         
         Router::$object = RESTObject::objectFactory ();
         

@@ -5,7 +5,7 @@ abstract class RESTObject {
     
     private $result = false;
     
-    abstract public function GET($id);
+    abstract public function GET();
     
     abstract public function POST();
     
@@ -27,7 +27,7 @@ abstract class RESTObject {
     }
     
     public function printJSON () {
-        header ('application/json');
+        header ('Content-Type: application/json');
         
         print $this->getJSON();
     }
