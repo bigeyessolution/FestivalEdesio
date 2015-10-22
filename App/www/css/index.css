@@ -34,6 +34,11 @@ body {
     font-family: bradhitc !important;              /* prevent copy paste, to allow, change 'none' to 'text' */
 }
 
+fieldset{
+    margin-top: 2em !important;
+}
+
+
 label{
     font-family: bradhitc !important;
 }
