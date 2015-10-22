@@ -3,4 +3,9 @@
 /platforms
 /plugins/
 test
+/App/hooks
+/App/nbproject
+/App/platforms
+/App/plugins/
+/App/test
 *.bak
